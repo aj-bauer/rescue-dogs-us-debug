@@ -163,7 +163,7 @@ if "df" in st.session_state:
     breed_df = df[df["breed_primary"] == selected_breed].copy()
 
     st.markdown("### 🧩 Will this breed get along with your household?")
-    st.markdown("##### Choose age, size, and sex to see how compatible these dogs are with children, cats, and other dogs.")
+    st.markdown("##### Choose age, size, and sex to see how compatible these dogs are with children, cats, and dogs.")
 
     # --- Trait selection controls ---
     col1, col2, col3 = st.columns(3)
