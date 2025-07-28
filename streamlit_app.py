@@ -18,7 +18,7 @@ else:
 # --- App Header ---
 st.title("🐶 Find your dream dog to adopt today")
 st.markdown("### 📍 Where do you live?")
-st.markdown("##### Click a state bar to see its top 10 imported dog breeds")
+st.markdown("##### Click a state bar to see its top 10 dog breeds")
 
 # --- Bar Chart: Dog count by state ---
 state_counts = df["contact_state"].value_counts().reset_index()
