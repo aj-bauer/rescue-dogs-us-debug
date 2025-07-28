@@ -1,4 +1,4 @@
-id,breed_primary,age,sex,size,env_children,env_dogs,env_cats,contact_state
+dog_id,breed_primary,age,sex,size,env_children,env_dogs,env_cats,contact_state
 46042150,American Staffordshire Terrier,Senior,Male,Medium,NA,NA,NA,NV
 46042002,Pit Bull Terrier,Adult,Male,Large,NA,NA,NA,NV
 46040898,Shepherd,Adult,Male,Large,NA,NA,NA,NV
