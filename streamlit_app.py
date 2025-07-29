@@ -161,7 +161,7 @@ if "df" in st.session_state:
         color=alt.Color("count:Q", scale=alt.Scale(scheme='greens'), title="Count"),
         tooltip=["age:N", "size:N", "count:Q"]
     ).properties(
-        width=800,
+        width=600,
         height=400
     )
 
