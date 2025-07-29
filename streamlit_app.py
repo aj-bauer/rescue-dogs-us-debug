@@ -69,8 +69,8 @@ st.markdown(state_map)
 
 # --- Graph 2: Bar Chart - Top 10 breeds in selected state ---
 ## Extract selected FIPS from query params
-selected_fips = state_map.get('_Select_id', None)
-
+selected_fips = state_map.get('id', None)
+st.markdown(selected_fips)
 
 ## Convert FIPS to state abbreviation
 fips_state = {v: k for k, v in state_fips.items()}
