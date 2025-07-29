@@ -68,7 +68,7 @@ state_map = st.altair_chart(chloropleth, use_container_width=True, on_select="re
 
 # --- Graph 2: Bar Chart - Top 10 breeds in selected state ---
 ## Extract selected FIPS from query params
-selected_fips = st.query_params.get('_Select_id', None)
+selected_fips = state_map.get('_Select_id', None)
 st.markdown(selected_fips)
 
 ## Convert FIPS to state abbreviation
