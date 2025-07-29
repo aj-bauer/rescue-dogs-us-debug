@@ -3,7 +3,7 @@ import pandas as pd
 import altair as alt
 
 # --- Page Setup ---
-st.set_page_config(page_title="Find your dream dog to adopt", layout="wide")
+st.set_page_config(page_title="DEBUGGER: Find your dream dog to adopt", layout="wide")
 
 # --- Load dataset---
 if "df" not in st.session_state:
@@ -65,11 +65,12 @@ chloropleth = alt.Chart(states).mark_geoshape().transform_lookup(
 
 ## Display map
 state_map = st.altair_chart(chloropleth, use_container_width=True, on_select="rerun")
+st.markdown(state_map)
 
 # --- Graph 2: Bar Chart - Top 10 breeds in selected state ---
 ## Extract selected FIPS from query params
 selected_fips = state_map.get('_Select_id', None)
-st.markdown(selected_fips)
+
 
 ## Convert FIPS to state abbreviation
 fips_state = {v: k for k, v in state_fips.items()}
