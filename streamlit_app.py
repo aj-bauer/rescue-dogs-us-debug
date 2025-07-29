@@ -65,17 +65,14 @@ chloropleth = alt.Chart(states).mark_geoshape().transform_lookup(
 
 ## Display map
 state_map = st.altair_chart(chloropleth, use_container_width=True, on_select="rerun")
-st.markdown(state_map)
 
 # --- Graph 2: Bar Chart - Top 10 breeds in selected state ---
 ## Extract selected FIPS from query params
 selected_fips = state_map.selection.Select[0]['id'] if len(state_map.selection.Select) > 0 else None
-st.markdown(selected_fips)
 
 ## Convert FIPS to state abbreviation
 fips_state = {v: k for k, v in state_fips.items()}
 selected_state = fips_state.get(int(selected_fips)) if selected_fips else None
-st.markdown(selected_state)
 st.session_state.selected_state = selected_state
 
 ## Filter dataset
